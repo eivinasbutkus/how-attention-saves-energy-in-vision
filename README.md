@@ -1,2 +1,4 @@
 # how-attention-saves-energy-in-vision
-Code for "How attention save energy in vision" (Butkus, Ying &amp; Kriegeskorte, 2026)
+Data and code for "How attention saves energy in vision" (Butkus, Ying &amp; Kriegeskorte, 2026).
+
+Code and data will be made publicly available ahead of publication. Check back soon.
