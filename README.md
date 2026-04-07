@@ -6,6 +6,7 @@ Code, model checkpoints, behavioral data for
 # Setup
 
 ### Installation
+Requires Python 3.12.
 
 ```bash
 # 1. Create the virtual environment
@@ -20,7 +21,16 @@ pip install -e .
 ```
 
 ### Pull model checkpoints and behavioral data
-from Zenodo `wget ...`
+
+```bash
+wget https://zenodo.org/records/19420209/files/checkpoints.tar?download=1 -O checkpoints.tar
+wget https://zenodo.org/records/19420209/files/data.tar?download=1 -O data.tar
+wget https://zenodo.org/records/19420209/files/results.tar?download=1 -O results.tar
+
+tar -xf checkpoints.tar && rm checkpoints.tar
+tar -xf data.tar && rm data.tar
+tar -xf results.tar && rm results.tar
+```
 
 
 # Code overview
