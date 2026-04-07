@@ -1,0 +1,11 @@
+
+where:
+  active: True
+  size: 16 # 16 x 16 grid
+
+  # kornia gaussian blur 2d params
+  smoothing:
+    enabled: False
+    kernel_size: 5
+    sigma: 1.0
+    border_type: 'reflect'

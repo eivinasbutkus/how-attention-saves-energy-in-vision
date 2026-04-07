@@ -1,0 +1,30 @@
+
+defaults:
+  - config_vcs_flexible
+  - override dataset: orientation_change_detection
+  - override model: ean_full
+  - override experiment: orientation_change_detection
+  - _self_
+
+train:
+  epochs: 50
+
+  noise_anneal:
+    enabled: True
+    warmup_epochs: 5 # how many 0.0 noise epochs there are
+    anneal_epochs: 5 # how many epochs it takes to reach the max noise
+
+  energy_anneal:
+    enabled: True
+    warmup_epochs: 35 # how many 0.0 energy epochs there are
+    anneal_epochs: 5 # how many epochs it takes to reach the max energy
+
+  lr_scheduler:
+    enabled: False
+
+  model: 
+    gain:
+      sensitivity: 0.1
+
+  skip_validation: True
+  checkpoint_save_interval: 1

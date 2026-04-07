@@ -1,0 +1,46 @@
+
+name: vcs # visual category search
+
+large_img_size: 64
+
+
+# SEARCH IMAGE
+target:
+  size: 16
+  centered: False # whether the target is in the center (for representational space understanding)
+
+# distractors can be of different kinds (e.g. fragments, decoys, ...)
+distractors:
+  size: 16
+  n_min: 2
+  n_max: 8
+
+min_distance: 10
+
+# noise applied to the search image
+noise:
+  min: 0.0
+  max: 0.2
+
+what:
+  size: 10 # 10 digit classes in MNIST
+
+where:
+  size: 10 # for where target, a heatmap/distribution is created with shape (size, size)
+  sigma: 1.0 # for where target, the heatmap is blurred with a gaussian kernel of this sigma
+
+# MASK IMAGE
+# (additionally generate an optional mask image with the same noise and mu level)
+mask_img: False
+mask_distractors:
+  n_min: 10
+  n_max: 15
+
+# DISK (optionally, load the dataset from disk)
+disk: False
+
+# METAINFO
+meta_info: False
+
+train_n: 60000
+valid_n: 10000

@@ -1,0 +1,67 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Model checkpoints & weights
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+checkpoints/
+runs/
+
+# Archives
+*.tar
+*.tar.gz
+*.zip
+
+# Datasets & data files
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.csv
+*.parquet
+data/
+datasets/
+
+# Logs & outputs
+logs/
+results/
+*.log
+tensorboard/
+
+# OS
+.DS_Store
+**/.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Hydra outputs
+outputs/
+multirun/
+.hydra/
+

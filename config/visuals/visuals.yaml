@@ -1,0 +1,11 @@
+
+heatmap_values: False
+
+minimal: True
+
+sensitivity_analysis: False
+decoder: False
+energy_cost: -8.0
+
+animation: False
+save_frames: False

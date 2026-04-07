@@ -1,0 +1,26 @@
+# "GRATING DETECTION TASK" in the paper
+
+name: contrast_detection
+
+large_img_size: 64 # 64x64 image size
+
+# original experiment: 2 cycles per degree, and stimulus diameter is
+# roughly 1.5 degrees => 3 cycles in the stimulus
+radius: 5 # radius of the grating
+cycles: 3
+# frequency: cycles / (2 * radius)
+
+center_left: [25, 16] # (top to bottom, left to right)
+center_right: [25, 48]
+
+# random shift of the center of the grating
+center_random_shift: 0 # in pixels
+
+# noise added to the image to simulate retinal noise
+# retinal_noise: 0.2
+retinal_noise: 0.0
+
+max_contrast: 0.5
+
+# trials in epoch
+n: 10000 

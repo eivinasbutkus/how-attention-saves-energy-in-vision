@@ -1,0 +1,12 @@
+
+name: pretrained
+
+defaults:
+  - baseline
+
+cnn:
+  pre_training:
+    train_weights: True
+    load_weights: False
+
+n_passes: 1 # just a single pass during pretraining to learn good CNN features

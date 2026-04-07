@@ -1,0 +1,64 @@
+
+dataloader:
+  batch_size: 128
+  shuffle: True
+  num_workers: 8
+
+epochs: 200
+
+preload_data: True
+
+checkpoint_save_interval: 10
+
+instance: 0
+
+
+# internal noise increasing during training to learn more efficiently
+noise_anneal:
+  enabled: True
+  warmup_epochs: 5 # how many 0.0 noise epochs there are
+  anneal_epochs: 5 # how many epochs it takes to reach the max noise
+
+energy_anneal:
+  enabled: True
+  warmup_epochs: 10 # how many 0.0 energy epochs there are
+  anneal_epochs: 5 # how many epochs it takes to reach the max energy
+
+loss:
+  weights:
+    what: 1.0
+    where: 1.0
+    energy: 1.0
+    unimodal_where_gain: 0.0
+
+  last_pass: 0.8 # the other passes get (1.0 - last_pass) / (n_passes - 1)
+
+energy:
+  enabled: True
+  norm: "l1"
+  accumulation: "sum"
+  cost: # log space
+    min: -12.0
+    max: -6.0
+
+  st_sample_ratio: 0.05 # proportion of spikes to sample for synaptic transmission cost estimation
+
+  ap_scale: 1.0 # action potential cost scale
+  st_scale: 0.025 # synaptic tranmission cost scale (to make the st : ap energy costs roughly 3 : 1)
+  norm_scale: 0.0 # normalization cost scale
+  gain_scale: 1000.0 # gain application cost scale
+
+
+adam:
+  lr: 0.0005
+  betas: [0.9, 0.999]
+  eps: 1e-8
+  weight_decay: 0.0
+
+lr_scheduler:
+  enabled: True
+  step_size: 80
+  gamma: 0.5
+
+
+skip_validation: False

@@ -1,0 +1,32 @@
+defaults:
+  - train
+
+epochs: 300
+num_workers: 12
+
+checkpoint_save_interval: 1
+
+# internal noise increasing during training to learn more efficiently
+noise_anneal:
+  enabled: True
+  warmup_epochs: 80 # how many 0.0 noise epochs there are
+  anneal_epochs: 5 # how many epochs it takes to reach the non-annealed noise
+  
+energy_anneal:
+  enabled: True
+  warmup_epochs: 100 # how many 0.0 energy cost epochs there are
+  anneal_epochs: 10 # how many epochs it takes to reach the non-annealed energy cost
+
+# energy cost for the pretrained model (less strict than for the final model)
+# the idea is to allow the model to:
+# (1) learn good features easier during pretraining
+# (2) but still have some energy penalty (so that the features learnt are sensitive to energy use)
+energy:
+  cost: 
+    min: -12.0
+    max: -9.0
+
+lr_scheduler:
+  enabled: True
+  step_size: 150
+  gamma: 0.5

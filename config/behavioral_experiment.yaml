@@ -1,0 +1,12 @@
+
+defaults:
+  - config
+  - dataset: vcs
+  - model: ean_baseline
+  - train: train
+  - visuals: visuals
+  - dataset_generation: behavioral_experiment_dataset_generation
+
+seed: 42
+checkpoint_elements: []
+experiment_name: behavioral_experiment

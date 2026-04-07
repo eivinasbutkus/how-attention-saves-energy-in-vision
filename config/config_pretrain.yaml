@@ -1,0 +1,11 @@
+
+defaults:
+  - _self_
+  - model: pretrained
+  - train: pretrain
+  - dataset: tiny_imagenet
+
+
+seed: 42
+checkpoint_elements: []
+

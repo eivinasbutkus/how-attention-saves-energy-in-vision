@@ -1,0 +1,7 @@
+defaults:
+  - config_vcs_flexible
+  - override experiment: journal_fixed
+  - _self_
+
+
+checkpoint_elements: [train.energy.cost.min]

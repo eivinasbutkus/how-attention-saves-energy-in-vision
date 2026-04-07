@@ -1,0 +1,5 @@
+
+
+when:
+  active: True
+  constant: False # whether gain stays constant across time steps

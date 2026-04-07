@@ -1,0 +1,9 @@
+
+name: journal_flexible
+
+energy_costs:
+  min: -12.0
+  max: -6.0
+  steps: 100
+
+n_instances: 5

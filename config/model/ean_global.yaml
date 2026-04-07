@@ -1,0 +1,5 @@
+defaults:
+  - baseline
+  - gain/when_gain
+
+name: ean_global

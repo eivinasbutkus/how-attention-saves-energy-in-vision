@@ -1,0 +1,40 @@
+
+cnn:
+  conv_channels: [64, 128, 256]
+  kernel_sizes: [5, 3, 3]
+  strides: [2, 2, 2]
+
+  pre_training:
+    train_weights: False
+    load_weights: True
+    checkpoint_dir: pretrained
+
+  normalization:
+    active: True
+
+    pool_sizes: [5, 5, 5]
+    sigma_spatial: 2.0 # standard deviation of the spatial Gaussian pooling
+    sigma: 1.0
+    alpha: 0.2
+
+rnn:
+  hidden_size: 256
+  n_layers: 3
+  init_mlp_hidden_size: 64
+
+  normalization:
+    active: True
+    sigma: 1.0
+    alpha: 0.2
+
+
+gain:
+  min: 0.0
+  max: 2.0
+  sensitivity: 1.0
+  mlp_hidden: 256
+
+
+activity_noise: 0.1 # establishes SNR tradeoff and scale of the activations
+
+n_passes: 4

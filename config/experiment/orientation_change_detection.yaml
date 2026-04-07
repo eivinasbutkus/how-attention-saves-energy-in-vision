@@ -1,0 +1,18 @@
+
+name: orientation_change_detection
+
+energy_costs: [-10.0]
+energy_cost_selected: -10.0
+
+n_reps: 20
+n_days: 50 # recording "days" in the experiment
+
+activation_to_spike_rate_scaling: 300  # scaling factor from activation to spike rate
+spike_rate_baseline: 1 # baseline rate (to avoid zero rates for numerical stability)
+variance_divide_factor: 20  # to get realistic fano factors (without this, the scaling factor explodes the trial variance that is already present from the gaussian noise on the pre-activations)
+max_rate: 100
+
+max_rate_noise_correlation_to_plot: 40
+
+redo_extraction: True
+conv_layers: ["conv3"]  # which conv layers to extract data from

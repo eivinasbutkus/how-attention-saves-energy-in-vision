@@ -1,0 +1,23 @@
+# "GRATING DETECTION TASK" in the paper
+name: contrast_detection
+
+redo_extraction: True
+
+# for the feedback suppression experiment
+gain_suppression:
+  min: 0.0
+  max: 5.0
+
+gain_suppression_amounts: [0.0, 5.0, 10.0, 20.0, 30.0, 50.0]
+
+energy_costs: [-8.0, -7.0, -6.0]
+n_reps: 3 # how many times to repeat each condition
+
+
+energy_cost_selected: -12.0
+gain_suppression_selected: 5.0
+
+
+# same as for orientation change detection
+activation_to_spike_rate_scaling: 300  # scaling factor from activation to spike rate
+spike_rate_baseline: 1 # baseline rate

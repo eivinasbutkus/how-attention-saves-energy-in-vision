@@ -1,0 +1,17 @@
+defaults:
+  - model
+
+gain:
+  what:
+    active: False
+
+  where:
+    active: False
+
+  when:
+    active: False
+
+
+
+
+name: baseline

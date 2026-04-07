@@ -1,0 +1,21 @@
+
+
+name: orientation_change_detection
+
+large_img_size: 64 # 64x64 image size
+
+radius: 8 # radius of the grating
+cycles: 4
+# frequency: cycles / (2 * radius)
+
+center_left: [25, 16] # (top to bottom, left to right)
+center_right: [25, 48]
+
+# trials in epoch
+n: 2000
+
+attend_valid_prob_init: 1.0 # start with 100% valid cue to induce unimodality in spatial attention
+attend_valid_prob_final_epoch: 50 # for the epoch, reduce to 80% valid cue
+attend_valid_prob_final: 0.8
+
+orientation_change_range: [1, 90]

@@ -1,0 +1,18 @@
+defaults:
+  - dataset: vcs
+
+  - model: ean_full
+  # - model: ean_features
+  # - model: ean_space
+  # - model: ean_global
+  # - model: baseline
+
+  - train: train
+  - visuals: visuals
+  - experiment: journal_flexible
+  - analysis: analysis
+  - plotting: plotting
+  - _self_
+
+seed: 42
+checkpoint_elements: []

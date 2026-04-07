@@ -1,0 +1,9 @@
+
+
+defaults:
+  - baseline
+  - gain/what_gain
+  - gain/where_gain
+
+
+name: ean_full

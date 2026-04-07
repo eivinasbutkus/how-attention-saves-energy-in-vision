@@ -1,0 +1,109 @@
+
+
+prediction_color: "#375e97"
+
+model_colors:
+  ean_global: "#5b8efd"
+  ean_features: "#ffb00d"
+  ean_space: "#ff5f00"
+  ean_full: "#dd217d"
+  baseline: "#555555"
+
+model_names:
+  baseline: baseline
+  ean_global: EAN-global
+  ean_features: EAN-feature
+  ean_space: EAN-spatial
+  ean_full: EAN-full
+
+conv_layer_names:
+    conv1 : cnn1
+    conv2 : cnn2
+    conv3 : cnn3
+    conv4 : cnn4
+
+
+flexible_inference_energy_levels:
+  low:
+    label: "low price of energy"
+    log_energy_cost: -12.0
+    color: "#FBA913"
+    range: [-12.0, -8.2]
+  intermediate:
+    label: "intermediate price of energy"
+    log_energy_cost: -7.5
+    color: "#EA3E0C"
+    range: [-8.2, -6.5]
+  high:
+    label: "high price of energy"
+    log_energy_cost: -6.0
+    color: "#7A5236"
+    range: [-6.5, -6.0]
+
+
+model_results:
+  redo_bootstraps: False
+  plot_function: richards
+  what_accuracy_threshold_for_energy_breakdown: 0.45
+
+
+
+behavioral_results:
+  qualitative_energy_cost: -7.7
+  n_energy_cost_bins: 16
+  error_consistency:
+    redo: False
+
+  difficulty:
+    n_bootstraps: 1000
+    redo: False
+    xlabel_fontsize: 10
+    r2_fontsize: 5.5
+
+
+rc_params:
+  # Font settings
+  font.family: sans-serif
+  font.sans-serif: ['Helvetica', 'Arial', 'DejaVu Sans']
+  font.size: 7
+
+  # Figure settings
+  figure.figsize: [3.5, 2.5]
+  figure.dpi: 300
+  figure.facecolor: white
+
+  # Axes settings
+  axes.labelsize: 7
+  axes.titlesize: 8
+  axes.linewidth: 0.5
+  axes.spines.top: False
+  axes.spines.right: False
+  axes.spines.left: True
+  axes.spines.bottom: True
+  axes.edgecolor: black
+  axes.grid: False
+  axes.axisbelow: True
+
+  # Tick settings
+  xtick.labelsize: 7
+  ytick.labelsize: 7
+  xtick.major.width: 0.5
+  ytick.major.width: 0.5
+
+  # Legend settings
+  legend.fontsize: 7
+
+  # Text settings
+  text.usetex: False
+
+  # Save figure settings
+  savefig.dpi: 300
+  savefig.bbox: 'tight'
+  savefig.pad_inches: 0.05
+
+# Custom sizes (separate from matplotlib rcParams)
+figsize:
+  single_column: [3.5, 2.5]
+  one_and_half_column: [5.0, 4.0]
+  double_column: [7.2, 5.0]
+  square_single: [3.5, 3.5]
