@@ -8,10 +8,19 @@ Code, model checkpoints, behavioral data for
 2. Download `results.tar` and `data.tar` from Zenodo (skip checkpoints.tar if you only want figures) ~6.7GB.
 3. Run any notebook in `notebooks/`. Each generates its figures in 1-3 minutes.
 
+
 # Setup
 
+### System requirements
+- **OS tested:** Ubuntu 22.04, macOS 26.3.1 (should work on other recent Linux / macOS versions)
+- **Python:** 3.12
+- **Hardware:** Figure reproduction runs on CPU. Model training requires an NVIDIA GPU with ~3 GB memory and CUDA support.
+- **Key dependencies** (auto-installed via `pip install -e .`): PyTorch, NumPy, SciPy, Matplotlib, Seaborn, pandas, statsmodels.
+- **Repository version:** This README corresponds to release v1.0.0.
+
 ### Installation
-Requires Python 3.12.
+
+Typical installation takes around 3-5 minutes.
 
 ```bash
 # 1. Create the virtual environment
@@ -24,8 +33,6 @@ source .venv/bin/activate        # macOS/Linux
 # 3. Install the project and all its dependencies
 pip install -e .
 ```
-
-Typical installation takes around 3-5 minutes.
 
 
 
