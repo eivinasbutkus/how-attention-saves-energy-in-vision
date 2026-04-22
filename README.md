@@ -2,12 +2,13 @@
 Code, model checkpoints, behavioral data for
 ["How attention saves energy in vision" (Butkus, Ying &amp; Kriegeskorte, 2026)](https://www.biorxiv.org/content/10.64898/2026.03.18.710397v1).
 
+_This README corresponds to release [v1.0.0](https://github.com/eivinasbutkus/how-attention-saves-energy-in-vision/releases/tag/v1.0.0)._
+
 ### Quick start (reproduce figures only)
 
 1. Install (3-5 min).
 2. Download `results.tar` and `data.tar` from Zenodo (skip checkpoints.tar if you only want figures) ~6.7GB.
 3. Run any notebook in `notebooks/`. Each generates its figures in 1-3 minutes.
-
 
 # Setup
 
@@ -16,7 +17,7 @@ Code, model checkpoints, behavioral data for
 - **Python:** 3.12
 - **Hardware:** Figure reproduction runs on CPU. Model training requires an NVIDIA GPU with ~3 GB memory and CUDA support.
 - **Key dependencies** (auto-installed via `pip install -e .`): PyTorch, NumPy, SciPy, Matplotlib, Seaborn, pandas, statsmodels.
-- **Repository version:** This README corresponds to release [v1.0.0](https://github.com/eivinasbutkus/how-attention-saves-energy-in-vision/releases/tag/v1.0.0).
+
 
 ### Installation
 
