@@ -1,7 +1,12 @@
 # How attention saves energy in vision 
 Code, model checkpoints, behavioral data for
-["How attention saves energy in vision" (Butkus, Ying &amp; Kriegeskorte, 2026](https://www.biorxiv.org/content/10.64898/2026.03.18.710397v1).
+["How attention saves energy in vision" (Butkus, Ying &amp; Kriegeskorte, 2026)](https://www.biorxiv.org/content/10.64898/2026.03.18.710397v1).
 
+### Quick start (reproduce figures only)
+
+1. Install (3-5 min).
+2. Download `results.tar` and `data.tar` from Zenodo (skip checkpoints.tar if you only want figures) ~6.7GB.
+3. Run any notebook in `notebooks/`. Each generates its figures in 1-3 minutes.
 
 # Setup
 
@@ -20,7 +25,16 @@ source .venv/bin/activate        # macOS/Linux
 pip install -e .
 ```
 
+Typical installation takes around 3-5 minutes.
+
+
+
+
+
+
 ### Pull model checkpoints and behavioral data
+
+Total download size ~26GB.
 
 ```bash
 wget "https://zenodo.org/records/19420209/files/checkpoints.tar?download=1" -O checkpoints.tar
@@ -61,7 +75,7 @@ dim = tuple(range(1, activations.dim())) # keeps the batch dimension (works on t
 energy_use["ap"] += activations.sum(dim=dim) # simply sum the activations
 ```
 
-Synaptic transmision definitions:
+Synaptic transmission definitions:
 * Linear layer: `compute_synaptic_transmission_linear`
 * Conv layer: `compute_synaptic_transmission_conv`
 
@@ -85,8 +99,9 @@ python scripts/train.py --config-name=config_orientation_change_detection
 ```
 
 
-
-
+Expected runtime:
+- Training models from scratch: several hours per model instance (GPU recommended, a single instance takes up ~2.2GB GPU memory)
+- Extracting model behavior from trained checkpoints: up to ~30 minutes
 
 # Analysis and figures
 
@@ -96,6 +111,7 @@ python scripts/train.py --config-name=config_orientation_change_detection
 
 ![](figures/fig1b_human_behavior.png)
 
+Note: `notebooks/behavioral_results.ipynb` generates both Fig 1b and Fig 5.
 
 
 ### Fig 3 - EAN-full inference dynamics
@@ -127,6 +143,15 @@ notebooks/orientation_change_detection/analyse_orientation_change_detection.ipyn
 ![](figures/fig6_ean_electrophysiology_v2_science.png)
 
 
+
+Expected runtime:
+- Generating plots from existing results files: 1–3 minutes per notebook
+- Generating bootstrap distributions from scratch: 10–20 minutes
+
+
+# License
+
+MIT License. See [LICENSE.md](LICENSE.md).
 
 # Citation
 ```
