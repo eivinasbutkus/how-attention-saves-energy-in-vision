@@ -16,7 +16,7 @@ Code, model checkpoints, behavioral data for
 - **Python:** 3.12
 - **Hardware:** Figure reproduction runs on CPU. Model training requires an NVIDIA GPU with ~3 GB memory and CUDA support.
 - **Key dependencies** (auto-installed via `pip install -e .`): PyTorch, NumPy, SciPy, Matplotlib, Seaborn, pandas, statsmodels.
-- **Repository version:** This README corresponds to release v1.0.0.
+- **Repository version:** This README corresponds to release [v1.0.0](https://github.com/eivinasbutkus/how-attention-saves-energy-in-vision/releases/tag/v1.0.0).
 
 ### Installation
 
@@ -137,7 +137,7 @@ Note: `notebooks/behavioral_results.ipynb` generates both Fig 1b and Fig 5.
 ### Fig 5 - EAN capture human behavior
 `notebooks/behavioral_results.ipynb`
 
-![](figures/fig5_model_human_behavior_comparison.png)
+![](figures/model_human_behavior_comparison_v2.png)
 
 
 ### Fig 6 - EAN capture neurophysiology of attention
