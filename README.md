@@ -10,6 +10,12 @@ Code, model checkpoints, behavioral data for
 
 # Setup
 
+| Goal | Downloads needed | Compute needed |
+|---|---|---|
+| Reproduce figures | data.tar + results.tar (~6.7GB) | CPU |
+| Re-extract model behavior | + checkpoints.tar (~26GB total) | GPU recommended |
+| Train from scratch | data.tar (~20MB) | GPU (~2.2GB memory per instance) |
+
 ### Installation
 Requires Python 3.12.
 
@@ -32,18 +38,24 @@ Typical installation takes around 3-5 minutes.
 
 
 
-### Pull model checkpoints and behavioral data
+### Pull behavioral data, results files, model checkpoints
 
-Total download size ~26GB.
+
+`results.tar` + `data.tar` ≈ 6.7GB.
+Total download size (including `checkpoints.tar`) ~26GB.
 
 ```bash
-wget "https://zenodo.org/records/19420209/files/checkpoints.tar?download=1" -O checkpoints.tar
+# Minimal (figures only)
 wget "https://zenodo.org/records/19420209/files/data.tar?download=1" -O data.tar
 wget "https://zenodo.org/records/19420209/files/results.tar?download=1" -O results.tar
 
-tar -xf checkpoints.tar && rm checkpoints.tar
+# Full (includes model checkpoints)
+wget "https://zenodo.org/records/19420209/files/checkpoints.tar?download=1" -O checkpoints.tar
+
+# Extract and remove archives
 tar -xf data.tar && rm data.tar
 tar -xf results.tar && rm results.tar
+tar -xf checkpoints.tar && rm checkpoints.tar   # if downloaded
 ```
 
 
@@ -105,6 +117,12 @@ Expected runtime:
 
 # Analysis and figures
 
+Expected runtime:
+- Generating plots from existing results files: 1–3 minutes per notebook
+- Generating bootstrap distributions from scratch: 10–20 minutes
+
+All figures use pre-computed results from results.tar.
+Set `redo=True` flags in configs or notebooks to regenerate results.
 
 ### Fig. 1b - human behavioral results
 `notebooks/behavioral_results.ipynb`
@@ -140,13 +158,10 @@ notebooks/orientation_change_detection/analyse_orientation_change_detection.ipyn
 ```
 
 
-![](figures/fig6_ean_electrophysiology_v2_science.png)
+![](figures/fig6_ean_electrophysiology_v2.png)
 
 
 
-Expected runtime:
-- Generating plots from existing results files: 1–3 minutes per notebook
-- Generating bootstrap distributions from scratch: 10–20 minutes
 
 
 # License
