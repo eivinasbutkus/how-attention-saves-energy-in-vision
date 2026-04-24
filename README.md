@@ -20,7 +20,7 @@ _This README corresponds to release [v1.0.0](https://github.com/eivinasbutkus/ho
 
 
 ### System requirements
-- **OS tested:** Ubuntu 22.04, macOS 26.3.1 (should work on other recent Linux / macOS versions)
+- **OS tested:** Ubuntu 22.04, macOS 26.3.1
 - **Python:** 3.12
 - **Hardware:** Figure reproduction runs on CPU. Model training requires an NVIDIA GPU with ~3 GB memory and CUDA support.
 - **Key dependencies** (auto-installed via `pip install -e .`): PyTorch, NumPy, SciPy, Matplotlib, Seaborn, pandas, statsmodels.
