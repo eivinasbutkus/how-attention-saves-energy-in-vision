@@ -2,6 +2,8 @@
 Code, model checkpoints, behavioral data for
 ["How attention saves energy in vision" (Butkus, Ying &amp; Kriegeskorte, 2026)](https://www.biorxiv.org/content/10.64898/2026.03.18.710397v1).
 
+_This README corresponds to release [v1.0.0](https://github.com/eivinasbutkus/how-attention-saves-energy-in-vision/releases/tag/v1.0.0)._
+
 ### Quick start (reproduce figures only)
 
 1. Install (3-5 min).
@@ -16,8 +18,17 @@ Code, model checkpoints, behavioral data for
 | Re-extract model behavior | + checkpoints.tar (~26GB total) | GPU recommended |
 | Train from scratch | data.tar (~20MB) | GPU (~2.2GB memory per instance) |
 
+
+### System requirements
+- **OS tested:** Ubuntu 22.04, macOS 26.3.1 (should work on other recent Linux / macOS versions)
+- **Python:** 3.12
+- **Hardware:** Figure reproduction runs on CPU. Model training requires an NVIDIA GPU with ~3 GB memory and CUDA support.
+- **Key dependencies** (auto-installed via `pip install -e .`): PyTorch, NumPy, SciPy, Matplotlib, Seaborn, pandas, statsmodels.
+
+
 ### Installation
-Requires Python 3.12.
+
+Typical installation takes around 3-5 minutes.
 
 ```bash
 # 1. Create the virtual environment
@@ -30,8 +41,6 @@ source .venv/bin/activate        # macOS/Linux
 # 3. Install the project and all its dependencies
 pip install -e .
 ```
-
-Typical installation takes around 3-5 minutes.
 
 
 
@@ -148,7 +157,7 @@ Note: `notebooks/behavioral_results.ipynb` generates both Fig 1b and Fig 5.
 ### Fig 5 - EAN capture human behavior
 `notebooks/behavioral_results.ipynb`
 
-![](figures/fig5_model_human_behavior_comparison.png)
+![](figures/model_human_behavior_comparison_v2.png)
 
 
 ### Fig 6 - EAN capture neurophysiology of attention
